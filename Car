@@ -1,0 +1,26 @@
+public class Car implements Comparable<Car> {
+private String model;
+private int yearOfManufacture;
+public Car(String model, int yearOfManufacture) {
+this.model = model;
+this.yearOfManufacture = yearOfManufacture;
+}
+public int getYearOfManufacture() {
+return yearOfManufacture;
+}
+@Override
+public String toString() {
+return "Car{" +
+"model='" + model + '\'' +
+", yearOfManufacture=" + yearOfManufacture +
+'}';
+}
+@Override
+public int compareTo(Car o) {
+if(this.yearOfManufacture > o.yearOfManufacture)
+return -1;
+if(this.yearOfManufacture < o.yearOfManufacture)
+return 1;
+return 0;
+}
+}
